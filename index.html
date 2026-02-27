@@ -8,20 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #0b0d11;
-      --bg-secondary: #0f1117;
-      --bg-card: #13151c;
-      --bg-card-hover: #181b24;
-      --accent: #4d8df5;
-      --accent-light: #6ba1ff;
-      --accent-dim: #4d8df518;
-      --accent-mid: #4d8df544;
-      --accent-glow: #4d8df522;
-      --text-primary: #e4e6ed;
-      --text-secondary: #8c8fa3;
-      --text-muted: #555770;
-      --border: #1c1f2b;
-      --border-hover: #272b3a;
+      --bg-primary: #e2e5ed;
+      --bg-secondary: #d8dce6;
+      --bg-card: #f2f4f9;
+      --bg-card-hover: #eaecf4;
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --accent-dim: #2563eb18;
+      --accent-mid: #2563eb44;
+      --accent-glow: #2563eb22;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border: #c8ccd9;
+      --border-hover: #b5bad0;
       --font-body: 'Plus Jakarta Sans', sans-serif;
       --font-mono: 'IBM Plex Mono', monospace;
     }
@@ -77,8 +77,8 @@
       justify-content: space-between;
       align-items: center;
       backdrop-filter: blur(24px);
-      background: #0b0d11dd;
-      border-bottom: 1px solid var(--border);
+      background: rgba(10, 13, 22, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-logo {
@@ -86,7 +86,7 @@
       font-weight: 800;
       font-size: 1.1rem;
       letter-spacing: -0.02em;
-      color: var(--text-primary);
+      color: #fff;
     }
 
     .nav-logo span {
@@ -103,14 +103,14 @@
     .nav-links a {
       font-family: var(--font-mono);
       font-size: 0.72rem;
-      color: var(--text-secondary);
+      color: rgba(255,255,255,0.6);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       transition: color 0.3s ease;
     }
 
-    .nav-links a:hover { color: var(--accent-light); }
+    .nav-links a:hover { color: #fff; }
 
     .nav-resume {
       font-family: var(--font-mono) !important;
@@ -166,7 +166,25 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
+      background: linear-gradient(135deg, #0a0d16 0%, #0f1525 50%, #111827 100%);
+      position: relative;
+      overflow: hidden;
     }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.12), transparent 65%);
+      pointer-events: none;
+    }
+    .hero-name, .hero-description, .hero-tag { color: #fff !important; }
+    .hero-name .accent { color: var(--accent-light) !important; }
+    .hero-description { color: rgba(255,255,255,0.65) !important; }
+    .hero-tag { color: rgba(255,255,255,0.45) !important; }
 
     .hero-inner {
       display: grid;
@@ -816,6 +834,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#" class="nav-resume" onclick="openToolsModal(); return false;">Tools 🔒</a></li>
+      <li><a href="#" class="nav-resume" onclick="alert('Upload your resume PDF and this will link to it'); return false;">Resume ↓</a></li>
     </ul>
   </nav>
 
@@ -1165,7 +1184,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: #0a0f1a;
+      background: #f0f2f7;
       z-index: 9999;
       align-items: center;
       justify-content: center;
@@ -1274,10 +1293,10 @@
       </div>
 
       <div id="tools-links">
-        <a href="https://polykalshidash.tayagorn.com" target="_blank" class="tool-link-card">
+        <a href="https://kalshipolydash.tayagorn.com" target="_blank" class="tool-link-card">
           <div>
             <div class="tool-name">PolyKalshi Arbitrage Bot</div>
-            <div class="tool-desc">polykalshidash.tayagorn.com</div>
+            <div class="tool-desc">kalshipolydash.tayagorn.com</div>
           </div>
           <span class="tool-arrow">&#x2197;</span>
         </a>
