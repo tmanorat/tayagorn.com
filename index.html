@@ -216,7 +216,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center 15%;
     }
 
     /* ====== ABOUT PHOTO ====== */
@@ -311,8 +311,8 @@
       text-transform: uppercase;
       padding: 14px 30px;
       background: transparent;
-      color: var(--text-primary);
-      border: 1px solid var(--border-hover);
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.3);
       border-radius: 4px;
       cursor: pointer;
       text-decoration: none;
@@ -834,7 +834,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#" class="nav-resume" onclick="openToolsModal(); return false;">Tools 🔒</a></li>
-      <li><a href="#" class="nav-resume" onclick="alert('Upload your resume PDF and this will link to it'); return false;">Resume ↓</a></li>
+      <li><a href="resume.pdf" target="_blank" class="nav-resume">Resume ↓</a></li>
     </ul>
   </nav>
 
