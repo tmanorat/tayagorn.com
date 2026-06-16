@@ -445,10 +445,10 @@
       <h1>Hi, I'm <em>Tayagorn Manorat</em>.</h1>
       <div class="hero-role">Business Intelligence Analyst</div>
       <p class="hero-sub">
-        I build <strong>Power BI reports, SQL pipelines, and Power Platform tools</strong> at
-        <strong>Leonardo DRS</strong>, a defense manufacturing company. My work runs from data
-        modeling and ETL to the apps and automations built around them. Outside of work I build
-        production AI systems, including MCP integrations that connect LLMs to live data.
+        I build production <strong>Power BI reports, Power Apps, SQL pipelines, and Power Platform
+        tools</strong> at <strong>Leonardo DRS</strong>, a defense contractor, used daily by ops and
+        leadership. I build data systems outside of work too: API ingestion pipelines, cloud-deployed
+        analytics, and MCP servers that connect LLMs to live data.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View my work</a>
@@ -456,20 +456,20 @@
       </div>
       <div class="stat-strip reveal">
         <div class="stat">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Power BI dashboards in production</div>
+          <div class="stat-num">60&#x2192;3<span style="font-size:1rem"> min</span></div>
+          <div class="stat-label">dataset refresh time after rebuilding the semantic model</div>
         </div>
         <div class="stat">
           <div class="stat-num">12M+</div>
-          <div class="stat-label">rows reconciled across legacy &amp; modern platforms</div>
+          <div class="stat-label">rows reconciled across Cognos and an internal platform</div>
         </div>
         <div class="stat">
-          <div class="stat-num">60&#x2192;8<span style="font-size:1rem"> min</span></div>
-          <div class="stat-label">dataset refresh time after semantic model redesign</div>
+          <div class="stat-num">60K+</div>
+          <div class="stat-label">records migrated from a legacy system with integrity intact</div>
         </div>
         <div class="stat">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">cross-departmental stakeholders served</div>
+          <div class="stat-num">1.5M+</div>
+          <div class="stat-label">records in my personal health data pipeline</div>
         </div>
       </div>
     </div>
@@ -485,22 +485,22 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a BI analyst at Leonardo DRS, where I build <strong>production Power BI reports,
-            SQL pipelines, and Power Platform solutions</strong> for a defense manufacturing business.
-            Most of my work replaces manual Excel processes with self-service reporting on scrap,
-            yield, capacity, and WIP.
+            I'm a BI analyst at Leonardo DRS, a defense contractor, where I build <strong>production
+            Power BI reports, Power Apps, and SQL pipelines</strong> that ops and leadership use every
+            day. The work runs from the semantic model and DAX up through the apps and automations
+            built around the data.
           </p>
           <p>
-            The job covers a lot of ground. Some weeks I'm redesigning a semantic model or moving
-            logic into SQL views. Other weeks I'm building a Power App to get around a platform
-            limitation, or sitting with engineering and finance to agree on what a KPI should mean.
-            I'm comfortable on <strong>the technical side and in front of stakeholders</strong>.
+            The job covers a lot of ground. Some weeks I'm rebuilding a model and pushing logic into
+            SQL views, writing row-level security, or wiring a paginated report to generate PDFs on
+            demand. Other weeks I'm building a Power App to get around a platform limitation, or
+            sitting with engineering and finance to agree on what a KPI should mean. I'm comfortable
+            on <strong>the technical side and in front of stakeholders</strong>.
           </p>
           <p>
-            Outside of work I build my own tools. The latest two are NOVA, an AI health coach
-            that connects Claude to my WHOOP and nutrition data through an MCP server, and a
-            weather arbitrage scanner that runs paper trading strategies against live prediction
-            markets. Both are deployed on the same DigitalOcean droplet.
+            I build data systems outside of work too. The main one is an AI health coach that pulls
+            from three APIs into a unified database and connects Claude to it through an MCP server,
+            alongside a weather arbitrage scanner that paper-trades against live prediction markets.
           </p>
         </div>
         <div class="about-photo reveal">
@@ -525,19 +525,22 @@
         </div>
         <div class="xp-org">Leonardo DRS <span>/ Melbourne, FL (Remote)</span></div>
         <ul>
-          <li>Built <strong>15+ Power BI dashboards</strong> replacing manual Excel and pivot workflows for ops and production leadership, providing daily self-service visibility into scrap, yield, and capacity KPIs</li>
-          <li>Redesigned Power BI semantic models and migrated logic into SQL views, cutting dataset refresh time <strong>from 60 to 8 minutes</strong> while improving reliability and audit support</li>
-          <li>Wrote SQL transformation logic to normalize and reconcile <strong>12M+ rows</strong> across Cognos and modern platforms, creating unified datasets for 20+ cross-departmental stakeholders</li>
-          <li>Built a production planning tool that takes a top-level part number, traverses the <strong>full bill of materials</strong>, and calculates scrap and yield rates for each component, replacing a quarterly manual process</li>
-          <li>Built <strong>three Power Apps</strong>: an audit form with field validation across 5 audit types, a SharePoint-driven project catalog filterable by business group, and a notes-capture app embedded in Power BI to work around its read-only limitation</li>
-          <li>Built Power Automate flows including form-submission alerts and a SharePoint file sync that monitors a folder and auto-replaces the target document with the latest file</li>
-          <li>Built a <strong>WIP tracking report off the MES</strong> surfacing due dates and projected completion for every production step, giving program supervisors visibility they did not have before</li>
+          <li>Rebuilt the Power BI semantic model and migrated report logic into SQL views, cutting dataset refresh time <strong>from 60 to 3 minutes</strong></li>
+          <li>Wrote <strong>DAX measures</strong> with CALCULATE, FILTER, ALL, and ALLEXCEPT to control filter context across reports, using VAR/RETURN to keep complex logic readable</li>
+          <li>Designed dynamic reports where a <strong>single slicer switches between measures</strong> with SELECTEDVALUE/SWITCH, and chart titles and labels update to match the selected context</li>
+          <li>Applied <strong>row-level security</strong> to filter report data by user at the dataset level, instead of maintaining separate reports per audience</li>
+          <li>Built a paginated report where selecting a work order triggers a <strong>SQL query that pulls all associated receipt data and formats it as a PDF</strong>, replacing a manual lookup process</li>
+          <li>Wrote SQL to normalize and reconcile <strong>12M+ rows</strong> across Cognos and an internal platform into unified datasets used for compliance and strategic planning</li>
+          <li>Migrated <strong>60,000+ records</strong> from a legacy system by writing the extraction and load query, maintaining data integrity throughout</li>
+          <li>Built a production planning tool that traverses <strong>bill-of-materials hierarchies with SQL CTEs</strong> and calculates scrap and yield rates per component from inventory transactions</li>
+          <li>Shipped multiple <strong>Power Apps</strong>, including a SharePoint-list snowflake schema that avoided a premium connector license, an intake app that standardizes how containment actions are captured, and an audit form validating 5 audit types</li>
+          <li>Automated Power Automate flows for form-submission alerts and a SharePoint file sync that auto-replaces target documents when a newer file is detected</li>
           <li>Partnered with engineering, operations, and finance to gather requirements, validate KPI definitions, and write process documentation aligned to regulatory objectives</li>
         </ul>
         <div class="tag-row">
-          <span class="tag">Power BI</span><span class="tag">SQL / T-SQL</span><span class="tag">DAX</span>
-          <span class="tag">Power Apps</span><span class="tag">Power Automate</span><span class="tag">SharePoint</span>
-          <span class="tag">Cognos</span><span class="tag">MES</span>
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">T-SQL</span>
+          <span class="tag">Power Query (M)</span><span class="tag">Row-Level Security</span><span class="tag">Power Apps</span>
+          <span class="tag">Power Automate</span><span class="tag">SharePoint</span><span class="tag">Cognos</span>
         </div>
       </div>
 
@@ -548,15 +551,13 @@
         </div>
         <div class="xp-org">Leonardo DRS <span>/ Melbourne, FL</span></div>
         <ul>
-          <li>Built Power BI dashboards with automated refresh and gateway config for near real-time <strong>warehouse and WIP aging</strong> visibility</li>
-          <li>Wrote a Python script to auto-refresh shop floor displays on a schedule; engineers had been cycling them manually with a wireless keyboard</li>
+          <li>Built Power BI dashboards replacing manual Excel workflows for ops and production leadership, providing daily self-service visibility into scrap, yield, and capacity KPIs</li>
+          <li>Migrated local Power BI reports to Power BI Service with gateway configuration, improving reliability and enabling cross-team access</li>
           <li>Built an <strong>Excel/VBA genealogy tool</strong> using SQL CTEs to map full product traceability, supporting contract lifecycle documentation and reducing manual lookup time</li>
-          <li>Migrated local Power BI reports to Power BI Service with gateway refreshes, improving reliability and enabling cross-team access</li>
-          <li>Performed data quality checks and validation on legacy system exports during system transitions, maintaining data security protocols throughout</li>
         </ul>
         <div class="tag-row">
-          <span class="tag">Power BI Service</span><span class="tag">Python</span><span class="tag">SQL CTEs</span>
-          <span class="tag">Excel / VBA</span><span class="tag">Data Validation</span>
+          <span class="tag">Power BI</span><span class="tag">Power BI Service</span><span class="tag">SQL CTEs</span>
+          <span class="tag">Excel / VBA</span>
         </div>
       </div>
     </div>
@@ -576,24 +577,25 @@
             stroke="#3ddc97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
         </svg>
         <div class="project-head">
-          <h3>NOVA AI Health Coaching System</h3>
-          <a href="https://health.tayagorn.com" target="_blank" rel="noopener" class="project-link">Live dashboard &#x2197;</a>
+          <h3>AI Health Coaching System</h3>
+          <a href="https://health.tayagorn.com/d/nova-health-main/" target="_blank" rel="noopener" class="project-link">Live dashboard &#x2197;</a>
         </div>
         <div class="project-tagline">Personal project</div>
         <p>
-          An AI coaching system that pulls <strong>WHOOP, Apple Health, and FatSecret data</strong> into
-          a 20+ table SQLite database (1.5M+ records) through Python pipelines on cron, handling
-          OAuth 1.0a and OAuth 2.0 token flows.
+          Python ingestion pipelines pull from <strong>three APIs (WHOOP, FatSecret, Apple Health)</strong>
+          into a unified 20+ table SQLite schema (1.5M+ records), handling OAuth 1.0a and 2.0 token
+          flows including auto-rotating refresh tokens.
         </p>
         <ul class="project-points">
-          <li>An <strong>MCP (Model Context Protocol) server exposes 16+ tools</strong> that give Claude live access to recovery, nutrition, and body composition data, running as a systemd service behind nginx with SSL</li>
-          <li>A versioned goals engine with separate weekday and weekend targets powers <strong>scheduled AI routines</strong> that send morning briefs and weekly reviews through Pushover</li>
-          <li>Includes a public <strong>Grafana dashboard</strong> for weight, macro, and recovery trends, plus an iOS Shortcut endpoint for live smart scale data</li>
+          <li>An <strong>MCP server exposes 16+ tools</strong> that give a live LLM agent access to recovery, nutrition, and body composition data</li>
+          <li>A versioned, append-only <strong>goals engine in SQLite</strong> with separate weekday and weekend targets powers Claude-generated morning briefs and weekly reviews, pushed to my phone through the Pushover API</li>
+          <li>A <strong>Grafana dashboard</strong> tracks weight, macro, and recovery trends on top of the pipeline data, giving the system a live BI layer alongside the LLM coaching interface</li>
+          <li>Built with Claude Code end-to-end, and designed to be <strong>model-agnostic</strong></li>
         </ul>
         <div class="tag-row">
           <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">MCP</span>
-          <span class="tag">Grafana</span><span class="tag">nginx</span><span class="tag">systemd</span>
-          <span class="tag">OAuth</span>
+          <span class="tag">REST APIs</span><span class="tag">OAuth 1.0a / 2.0</span><span class="tag">Grafana</span>
+          <span class="tag">Pushover</span>
         </div>
       </div>
 
@@ -605,26 +607,22 @@
             stroke="#3ddc97" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.35"/>
         </svg>
         <div class="project-head">
-          <h3>PolyKalshi Weather Arb Scanner</h3>
+          <h3>PolyKalshi Weather Arbitrage Scanner</h3>
           <a href="https://polykalshidash.tayagorn.com" target="_blank" rel="noopener" class="project-link">Live dashboard &#x2197;</a>
         </div>
         <div class="project-tagline">Personal project</div>
         <p>
-          Polls <strong>Polymarket and Kalshi temperature contracts every 30 seconds</strong> across NYC,
-          Chicago, and Miami, comparing market-implied probabilities to a prediction model
-          to find mispriced contracts.
+          Polls <strong>Polymarket and Kalshi temperature contracts every 30 seconds</strong> across
+          three cities, comparing market-implied probabilities to a prediction model that blends
+          NWS forecasts with 10 years of NOAA climatology.
         </p>
         <ul class="project-points">
-          <li>The temperature model blends <strong>NWS forecasts with 10 years of NOAA climatology</strong> and real-time observed temps</li>
-          <li>Five parallel <strong>paper trading strategies with Kelly criterion sizing</strong>, each A/B tested against an independent virtual bankroll</li>
-          <li>Deployed on DigitalOcean with <strong>Docker Compose and PostgreSQL</strong>, plus a Streamlit dashboard showing live predictions and trade history</li>
+          <li>Runs <strong>5 parallel paper-trading strategies with Kelly criterion sizing</strong>, each A/B tested against an independent virtual bankroll</li>
+          <li>Deployed via <strong>Docker Compose with PostgreSQL</strong> and a Streamlit dashboard showing live predictions and trade history</li>
         </ul>
         <div class="tag-row">
           <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Docker Compose</span>
           <span class="tag">Streamlit</span><span class="tag">DigitalOcean</span><span class="tag">Kelly Criterion</span>
-        </div>
-        <div class="project-note">
-          Built with Claude Code. I direct the architecture and product decisions and use AI to implement and debug.
         </div>
       </div>
     </div>
@@ -639,35 +637,45 @@
       </div>
       <div class="skill-groups">
         <div class="skill-group reveal">
-          <h3>Tools &amp; Platforms</h3>
+          <h3>BI &amp; Reporting</h3>
           <div class="chips">
-            <span class="chip">Power BI</span><span class="chip">Power Apps</span><span class="chip">Power Automate</span>
-            <span class="chip">Power BI Service</span><span class="chip">SharePoint</span><span class="chip">Microsoft Lists</span>
-            <span class="chip">Excel (Advanced)</span><span class="chip">Cognos</span><span class="chip">Tableau</span>
-            <span class="chip">Docker</span><span class="chip">DigitalOcean</span><span class="chip">GitHub</span>
+            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query (M)</span>
+            <span class="chip">Semantic Modeling</span><span class="chip">Power BI Service / Fabric</span>
+            <span class="chip">Tableau</span><span class="chip">Cognos</span>
           </div>
         </div>
         <div class="skill-group reveal">
           <h3>Data &amp; SQL</h3>
           <div class="chips">
-            <span class="chip">SQL (T-SQL, SQL Server)</span><span class="chip">Python</span><span class="chip">DAX</span>
-            <span class="chip">Power Query (M)</span><span class="chip">ETL / ELT</span>
-            <span class="chip">Semantic Modeling</span><span class="chip">Data Validation</span>
+            <span class="chip">SQL (T-SQL, SQL Server)</span><span class="chip">Python</span>
+            <span class="chip">ETL / ELT</span><span class="chip">Data Validation</span><span class="chip">Data Quality</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3>AI</h3>
+          <h3>Power Platform</h3>
+          <div class="chips">
+            <span class="chip">Power Apps</span><span class="chip">Power Automate</span><span class="chip">SharePoint</span>
+            <span class="chip">Microsoft Lists</span><span class="chip">Excel (Advanced)</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Data Engineering</h3>
+          <div class="chips">
+            <span class="chip">REST API Ingestion</span><span class="chip">OAuth 1.0a / 2.0</span><span class="chip">SQLite</span>
+            <span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">cron pipelines</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>AI &amp; Automation</h3>
           <div class="chips">
             <span class="chip">Claude</span><span class="chip">Claude Code</span><span class="chip">MCP Server Development</span>
-            <span class="chip">LLM Tool Integration</span><span class="chip">Prompt Engineering</span><span class="chip">ChatGPT</span>
+            <span class="chip">LLM Tool Integration</span><span class="chip">Prompt Engineering</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3>Process &amp; Communication</h3>
+          <h3>Infrastructure</h3>
           <div class="chips">
-            <span class="chip">Requirements Gathering</span><span class="chip">Root Cause Analysis</span>
-            <span class="chip">Stakeholder Communication</span><span class="chip">Audit Support</span>
-            <span class="chip">Process Documentation</span>
+            <span class="chip">DigitalOcean</span><span class="chip">Docker Compose</span><span class="chip">GitHub</span>
           </div>
         </div>
       </div>
@@ -690,9 +698,10 @@
         <div class="edu-card reveal">
           <h3>Certifications</h3>
           <ul style="margin-top:12px">
+            <li>PL-300: Power BI Data Analyst (in progress)</li>
+            <li>P3 Adaptive Advanced Power BI</li>
             <li>Microsoft Office Specialist (Excel)</li>
             <li>SQL Bootcamp (Udemy)</li>
-            <li>P3 Adaptive Advanced Power BI</li>
           </ul>
         </div>
       </div>
