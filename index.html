@@ -336,60 +336,6 @@
       gap: 16px; flex-wrap: wrap;
     }
     .footer-inner p { font-family: var(--mono); font-size: 0.82rem; color: var(--faint); }
-    .footer-tools {
-      font-family: var(--mono); font-size: 0.82rem; color: var(--faint);
-      cursor: pointer; transition: color 0.2s; background: none; border: none;
-    }
-    .footer-tools:hover { color: var(--accent); }
-
-    /* ============ TOOLS MODAL (soft gate) ============ */
-    #tools-overlay {
-      position: fixed; inset: 0; z-index: 200;
-      background: rgba(6, 9, 14, 0.78);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      display: none; align-items: center; justify-content: center;
-      padding: 24px;
-    }
-    #tools-overlay.active { display: flex; }
-    .tools-modal {
-      width: 100%; max-width: 430px;
-      background: var(--card); border: 1px solid var(--card-edge);
-      border-radius: 14px; padding: 36px;
-    }
-    .tools-modal h2 { font-size: 1.3rem; margin-bottom: 6px; }
-    .modal-sub { color: var(--muted); font-size: 0.98rem; margin-bottom: 24px; }
-    #tools-modal-form { display: flex; flex-direction: column; gap: 12px; }
-    #tools-password {
-      width: 100%; padding: 13px 16px;
-      background: var(--bg); border: 1px solid var(--card-edge);
-      border-radius: 8px; color: var(--text);
-      font-family: var(--mono); font-size: 1rem;
-      outline: none; transition: border-color 0.2s;
-    }
-    #tools-password:focus { border-color: var(--accent); }
-    #tools-password.error { border-color: #e5534b; animation: shake 0.3s; }
-    @keyframes shake { 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
-    .error-msg { color: #e5534b; font-size: 0.9rem; display: none; }
-    .error-msg.visible { display: block; }
-    .unlock-btn {
-      background: var(--accent); color: #06241a; border: none;
-      font-family: var(--mono); font-size: 0.95rem; font-weight: 600;
-      padding: 13px; border-radius: 8px; cursor: pointer;
-      transition: background 0.2s;
-    }
-    .unlock-btn:hover { background: #52e8a8; }
-    #tools-links { display: none; flex-direction: column; gap: 12px; }
-    #tools-links.visible { display: flex; }
-    .tool-link-card {
-      display: flex; justify-content: space-between; align-items: center;
-      border: 1px solid var(--card-edge); border-radius: 10px;
-      padding: 16px 18px; transition: border-color 0.2s, background 0.2s;
-    }
-    .tool-link-card:hover { border-color: var(--accent-line); background: var(--accent-dim); }
-    .tool-name { font-weight: 600; font-size: 1.02rem; }
-    .tool-desc { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
-    .tool-arrow { color: var(--accent); }
 
     /* ============ REVEAL ============ */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -433,7 +379,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.pdf" target="_blank" class="nav-cta">Resume &#x2193;</a></li>
+        <li><a href="Tayagorn_Manorat_Public_Resume.pdf" target="_blank" class="nav-cta">Resume &#x2193;</a></li>
       </ul>
     </div>
   </nav>
@@ -443,12 +389,11 @@
     <div class="wrap">
       <div class="hero-status">Charleston, SC &middot; Open to opportunities</div>
       <h1>Hi, I'm <em>Tayagorn Manorat</em>.</h1>
-      <div class="hero-role">Business Intelligence Analyst</div>
+      <div class="hero-role">BI Analyst and Analytics Engineer</div>
       <p class="hero-sub">
-        I build production <strong>Power BI reports, Power Apps, SQL pipelines, and Power Platform
-        tools</strong> at <strong>Leonardo DRS</strong>, a defense contractor, used daily by ops and
-        leadership. I build data systems outside of work too: API ingestion pipelines, cloud-deployed
-        analytics, and MCP servers that connect LLMs to live data.
+        I build <strong>Power BI reports, SQL models, Power Platform tools, and data pipelines</strong>
+        for business teams in a regulated environment. Outside of work, I build personal data systems
+        with APIs, dashboards, cloud deployment, and MCP servers that connect LLMs to live data.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View my work</a>
@@ -457,15 +402,15 @@
       <div class="stat-strip reveal">
         <div class="stat">
           <div class="stat-num">60&#x2192;3<span style="font-size:1rem"> min</span></div>
-          <div class="stat-label">dataset refresh time after rebuilding the semantic model</div>
+          <div class="stat-label">refresh time cut after rebuilding a semantic model</div>
         </div>
         <div class="stat">
           <div class="stat-num">12M+</div>
-          <div class="stat-label">rows reconciled across Cognos and an internal platform</div>
+          <div class="stat-label">rows reconciled and validated across enterprise systems</div>
         </div>
         <div class="stat">
           <div class="stat-num">60K+</div>
-          <div class="stat-label">records migrated from a legacy system with integrity intact</div>
+          <div class="stat-label">legacy records migrated into new reporting structures</div>
         </div>
         <div class="stat">
           <div class="stat-num">1.5M+</div>
@@ -485,22 +430,21 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a BI analyst at Leonardo DRS, a defense contractor, where I build <strong>production
-            Power BI reports, Power Apps, and SQL pipelines</strong> that ops and leadership use every
-            day. The work runs from the semantic model and DAX up through the apps and automations
-            built around the data.
+            I'm a BI analyst working in a regulated environment, where I build <strong>Power BI reports,
+            SQL models, Power Apps, and Power Automate workflows</strong> for business teams. The work
+            runs from data modeling and DAX to the apps and automations built around the reporting layer.
           </p>
           <p>
-            The job covers a lot of ground. Some weeks I'm rebuilding a model and pushing logic into
-            SQL views, writing row-level security, or wiring a paginated report to generate PDFs on
-            demand. Other weeks I'm building a Power App to get around a platform limitation, or
-            sitting with engineering and finance to agree on what a KPI should mean. I'm comfortable
-            on <strong>the technical side and in front of stakeholders</strong>.
+            My work is a mix of technical buildout and stakeholder support. I rebuild models, move logic
+            into SQL, write role-based reporting patterns, automate manual workflows, and help teams agree
+            on KPI definitions they can trust. I'm comfortable on <strong>the technical side and in front
+            of stakeholders</strong>.
           </p>
           <p>
-            I build data systems outside of work too. The main one is an AI health coach that pulls
-            from three APIs into a unified database and connects Claude to it through an MCP server,
-            alongside a weather arbitrage scanner that paper-trades against live prediction markets.
+            Outside of work, I build data systems on my own. My main project is an AI health coaching
+            system that pulls wearable and nutrition data into a database, connects an LLM to it through
+            an MCP server, and tracks trends through dashboards. I also built a prediction-market
+            analytics project around weather contracts.
           </p>
         </div>
         <div class="about-photo reveal">
@@ -525,22 +469,23 @@
         </div>
         <div class="xp-org">Leonardo DRS <span>/ Melbourne, FL (Remote)</span></div>
         <ul>
-          <li>Rebuilt the Power BI semantic model and migrated report logic into SQL views, cutting dataset refresh time <strong>from 60 to 3 minutes</strong></li>
-          <li>Wrote <strong>DAX measures</strong> with CALCULATE, FILTER, ALL, and ALLEXCEPT to control filter context across reports, using VAR/RETURN to keep complex logic readable</li>
-          <li>Designed dynamic reports where a <strong>single slicer switches between measures</strong> with SELECTEDVALUE/SWITCH, and chart titles and labels update to match the selected context</li>
-          <li>Applied <strong>row-level security</strong> to filter report data by user at the dataset level, instead of maintaining separate reports per audience</li>
-          <li>Built a paginated report where selecting a work order triggers a <strong>SQL query that pulls all associated receipt data and formats it as a PDF</strong>, replacing a manual lookup process</li>
-          <li>Wrote SQL to normalize and reconcile <strong>12M+ rows</strong> across Cognos and an internal platform into unified datasets used for compliance and strategic planning</li>
-          <li>Migrated <strong>60,000+ records</strong> from a legacy system by writing the extraction and load query, maintaining data integrity throughout</li>
-          <li>Built a production planning tool that traverses <strong>bill-of-materials hierarchies with SQL CTEs</strong> and calculates scrap and yield rates per component from inventory transactions</li>
-          <li>Shipped multiple <strong>Power Apps</strong>, including a SharePoint-list snowflake schema that avoided a premium connector license, an intake app that standardizes how containment actions are captured, and an audit form validating 5 audit types</li>
-          <li>Automated Power Automate flows for form-submission alerts and a SharePoint file sync that auto-replaces target documents when a newer file is detected</li>
-          <li>Partnered with engineering, operations, and finance to gather requirements, validate KPI definitions, and write process documentation aligned to regulatory objectives</li>
+          <li>Built production <strong>Power BI reports, SQL models, Power Platform tools, and automated workflows</strong> for business teams in a regulated environment</li>
+          <li>Rebuilt a Power BI semantic model and moved report logic into SQL views, cutting refresh time <strong>from 60 to 3 minutes</strong></li>
+          <li>Wrote <strong>DAX measures</strong> with CALCULATE, FILTER, ALL, ALLEXCEPT, SELECTEDVALUE, SWITCH, and VAR/RETURN to support dynamic reporting and cleaner filter logic</li>
+          <li>Built <strong>role-based reporting patterns</strong> in Power BI so different user groups could access the right data without maintaining separate reports</li>
+          <li>Designed dynamic Power BI reports where users could switch between metrics from a single control, reducing duplicate report pages and making self-service analysis easier</li>
+          <li>Wrote SQL transformation and validation logic to reconcile <strong>12M+ rows</strong> across enterprise systems</li>
+          <li>Migrated <strong>60,000+ legacy records</strong> into new reporting structures while validating data integrity</li>
+          <li>Built scheduled SQL processes to refresh KPI baselines, giving teams a consistent way to compare current and historical performance</li>
+          <li>Automated manual reporting, intake, and file-handling workflows with <strong>Power Apps, Power Automate, SharePoint, Microsoft Lists, and Power BI Service</strong></li>
+          <li>Designed SharePoint-backed data structures for Power Apps, supporting structured workflows without requiring premium connector licensing</li>
+          <li>Built paginated reporting and alerting workflows to standardize recurring business processes</li>
+          <li>Worked with operations, engineering, finance, and leadership teams to define KPIs, validate data, document processes, and deliver reporting tools people could trust</li>
         </ul>
         <div class="tag-row">
           <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">T-SQL</span>
-          <span class="tag">Power Query (M)</span><span class="tag">Row-Level Security</span><span class="tag">Power Apps</span>
-          <span class="tag">Power Automate</span><span class="tag">SharePoint</span><span class="tag">Cognos</span>
+          <span class="tag">Power Query (M)</span><span class="tag">Role-Based Reporting</span><span class="tag">Power Apps</span>
+          <span class="tag">Power Automate</span><span class="tag">SharePoint</span><span class="tag">Power BI Service</span>
         </div>
       </div>
 
@@ -551,12 +496,12 @@
         </div>
         <div class="xp-org">Leonardo DRS <span>/ Melbourne, FL</span></div>
         <ul>
-          <li>Built Power BI dashboards replacing manual Excel workflows for ops and production leadership, providing daily self-service visibility into scrap, yield, and capacity KPIs</li>
-          <li>Migrated local Power BI reports to Power BI Service with gateway configuration, improving reliability and enabling cross-team access</li>
-          <li>Built an <strong>Excel/VBA genealogy tool</strong> using SQL CTEs to map full product traceability, supporting contract lifecycle documentation and reducing manual lookup time</li>
+          <li>Built Power BI dashboards that replaced manual Excel workflows and improved self-service reporting for business teams</li>
+          <li>Migrated local Power BI reports to Power BI Service with gateway configuration, improving reliability and access for users</li>
+          <li>Built <strong>SQL and Excel-based tools</strong> to support reporting, documentation, and operational analysis</li>
         </ul>
         <div class="tag-row">
-          <span class="tag">Power BI</span><span class="tag">Power BI Service</span><span class="tag">SQL CTEs</span>
+          <span class="tag">Power BI</span><span class="tag">Power BI Service</span><span class="tag">SQL</span>
           <span class="tag">Excel / VBA</span>
         </div>
       </div>
@@ -578,7 +523,7 @@
         </svg>
         <div class="project-head">
           <h3>AI Health Coaching System</h3>
-          <a href="https://health.tayagorn.com/d/nova-health-main/" target="_blank" rel="noopener" class="project-link">Live dashboard &#x2197;</a>
+          <span class="project-link" style="cursor:default">Demo available on request</span>
         </div>
         <div class="project-tagline">Personal project</div>
         <p>
@@ -639,9 +584,9 @@
         <div class="skill-group reveal">
           <h3>BI &amp; Reporting</h3>
           <div class="chips">
-            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query (M)</span>
-            <span class="chip">Semantic Modeling</span><span class="chip">Power BI Service / Fabric</span>
-            <span class="chip">Tableau</span><span class="chip">Cognos</span>
+            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span>
+            <span class="chip">Semantic Modeling</span><span class="chip">Power BI Service</span>
+            <span class="chip">Paginated Reports</span><span class="chip">Row-Level Security</span>
           </div>
         </div>
         <div class="skill-group reveal">
@@ -719,7 +664,7 @@
       <div class="contact-row reveal">
         <a href="mailto:tayagornm@gmail.com" class="btn btn-primary">tayagornm@gmail.com</a>
         <a href="https://linkedin.com/in/tayagornm" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn &#x2197;</a>
-        <a href="resume.pdf" target="_blank" class="btn btn-ghost">Resume &#x2193;</a>
+        <a href="Tayagorn_Manorat_Public_Resume.pdf" target="_blank" class="btn btn-ghost">Resume &#x2193;</a>
       </div>
     </div>
   </section>
@@ -727,40 +672,8 @@
   <footer>
     <div class="footer-inner">
       <p>&copy; 2026 Tayagorn Manorat</p>
-      <button class="footer-tools" onclick="openToolsModal()">internal tools &#x1F512;</button>
     </div>
   </footer>
-
-  <!-- ============ TOOLS MODAL ============ -->
-  <div id="tools-overlay">
-    <div class="tools-modal">
-      <div id="tools-auth">
-        <h2>Internal Tools</h2>
-        <p class="modal-sub">Enter your access password to continue.</p>
-        <div id="tools-modal-form">
-          <input type="password" id="tools-password" placeholder="Password" onkeydown="if(event.key==='Enter') checkToolsPassword()" />
-          <p class="error-msg" id="tools-error">Incorrect password. Try again.</p>
-          <button class="unlock-btn" onclick="checkToolsPassword()">Unlock &#x2192;</button>
-        </div>
-      </div>
-      <div id="tools-links">
-        <a href="https://polykalshidash.tayagorn.com" target="_blank" class="tool-link-card">
-          <div>
-            <div class="tool-name">PolyKalshi Arbitrage Bot</div>
-            <div class="tool-desc">polykalshidash.tayagorn.com</div>
-          </div>
-          <span class="tool-arrow">&#x2197;</span>
-        </a>
-        <a href="https://cpibot.tayagorn.com" target="_blank" class="tool-link-card">
-          <div>
-            <div class="tool-name">CPI Bot</div>
-            <div class="tool-desc">cpibot.tayagorn.com</div>
-          </div>
-          <span class="tool-arrow">&#x2197;</span>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <script>
     // mobile nav
@@ -783,46 +696,6 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
-
-    // tools modal (soft gate)
-    function openToolsModal() {
-      document.getElementById('tools-overlay').classList.add('active');
-      if (sessionStorage.getItem('tools_unlocked') === '1') {
-        showToolsLinks();
-      } else {
-        setTimeout(function () { document.getElementById('tools-password').focus(); }, 100);
-      }
-    }
-
-    function closeToolsModal() {
-      document.getElementById('tools-overlay').classList.remove('active');
-    }
-
-    function checkToolsPassword() {
-      var input = document.getElementById('tools-password');
-      var err = document.getElementById('tools-error');
-      if (input.value === 'tayagornaccess') {
-        sessionStorage.setItem('tools_unlocked', '1');
-        showToolsLinks();
-      } else {
-        input.classList.add('error');
-        err.classList.add('visible');
-        input.value = '';
-        setTimeout(function () { input.classList.remove('error'); }, 1500);
-      }
-    }
-
-    function showToolsLinks() {
-      document.getElementById('tools-auth').style.display = 'none';
-      document.getElementById('tools-links').classList.add('visible');
-    }
-
-    document.getElementById('tools-overlay').addEventListener('click', function (e) {
-      if (e.target === this) closeToolsModal();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeToolsModal();
-    });
   </script>
 </body>
 </html>
